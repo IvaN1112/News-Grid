@@ -1,0 +1,343 @@
+/* Lato font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Staatliches&display=swap");
+
+/* removing global margin and padding/setting global border-box */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* primary main color */
+  --clr-primary-5: #cf0e00;
+  /* secondary color */
+  --secondary-color: #ffa930;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  /* darkest grey - used for headings */
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
+  /* category colors */
+  --clr-grey-1: #102a42;
+  --clr-grey-2: #243a52;
+  --clr-grey-3: #324d67;
+  --clr-grey-4: #48647f;
+  /* grey used for paragraphs */
+  --clr-grey-5: #617d98;
+  --clr-grey-6: #829ab0;
+  --clr-grey-7: #9eb2c7;
+  --clr-grey-8: #bcccdc;
+  --clr-grey-9: #dae2ec;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --ff-primary: "Lato", sans-serif;
+  --ff-secondary: "Staatliches", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 2rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1100px;
+}
+
+/*****************
+***** Default styles*****
+ *****************/
+body {
+  font-family: var(--ff-primary);
+}
+
+/* we do this so by default images occupy 100% of the container they are in */
+img:not(.logo-img) {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+  margin-bottom: 1.4rem;
+}
+
+ion-icon {
+  color: var(--clr-primary-5);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input:not([type="checkbox"]),
+select,
+textarea,
+.confirm-news {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/*****************
+***** Global classes*****
+ *****************/
+.section-center {
+  width: 95vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section {
+  padding: 5rem 0;
+}
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.btn {
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: 0.1rem solid var(--clr-primary-5);
+  transition: var(--transition);
+  text-transform: capitalize;
+  background: var(--clr-primary-5);
+}
+.btn:hover {
+  background: transparent;
+}
+.decoration-line {
+  width: 4rem;
+  height: 0.125rem;
+  background: var(--clr-primary-5);
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+.article-button {
+  padding: 0.35rem;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: var(--clr-white);
+}
+@media screen and (max-width: 992px) {
+  .section-center {
+    width: 90vw;
+  }
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+/*****************
+***** Animations*****
+ *****************/
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.008);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*****************
+***** Default styles*****
+ *****************/
+
+nav {
+  padding: 0.7rem 0;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  align-items: center;
+}
+.logo-img {
+  width: 180px;
+}
+nav ul {
+  list-style-type: none;
+}
+.social-icons {
+  font-size: 1.5rem;
+  justify-self: center;
+}
+.social-icons i {
+  color: var(--clr-grey-3);
+  transition: var(--transition);
+}
+.social-icons i:hover {
+  color: var(--clr-grey-6);
+}
+.site-links {
+  text-align: center;
+}
+.site-links li {
+  display: inline-block;
+}
+.site-links a {
+  padding: 0.7rem;
+}
+.home-link {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  transition: var(--transition);
+  border: 2px solid var(--clr-primary-5);
+}
+.home-link:hover {
+  background: var(--clr-white);
+  color: var(--clr-primary-5);
+}
+.about-link {
+  transition: var(--transition);
+}
+.about-link:hover {
+  color: var(--clr-primary-5);
+}
+@media screen and (max-width: 782px) {
+  .social-icons {
+    display: none;
+  }
+  nav {
+    grid-template-columns: 2fr 1fr;
+  }
+  .site-links {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 500px) {
+  .site-links a {
+    padding: 0.4rem;
+  }
+}
+
+/*****************
+***** Showcase*****
+ *****************/
+.showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../images/featured.jpg") center/cover no-repeat;
+  height: 70vh;
+  color: var(--clr-white);
+}
+.showcase-center {
+  padding-top: 7rem;
+}
+.sports-button {
+  background: var(--sports-color);
+}
+h1 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.showcase p {
+  max-width: 25rem;
+  margin-bottom: 1.2rem;
+}
+
+/*****************
+***** Editors picks*****
+ *****************/
+
+.editors {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  background: var(--clr-grey-10);
+}
+.articles-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "a a b" "c d e" "c d e" "f g g";
+  grid-gap: 1rem;
+}
+.article {
+  background: var(--clr-white);
+  padding: 1rem;
+}
+.article .read-link {
+  color: var(--dark-color);
+}
+.article-1 {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.ent-button {
+  background: var(--ent-color);
+}
+.article-heading {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.article-2 {
+  grid-area: b;
+  background: var(--dark-color);
+  color: var(--clr-white);
+}
+.article-3 {
+  grid-area: c;
+}
+.tech-button {
+  background: var(--tech-color);
+  display: inline-block;
+  margin: 0.7rem 1rem;
+}
+.article-3 h3,
+.article-5 h3 {
+  margin-top: 0;
+}
+.article-4 {
+  grid-area: d;
+}
+.article-4 p {
+  margin-bottom: 1rem;
+}
+.article-5 {
+  grid-area: e;
+}
+.article-3,
+.article-4,
+.article-5 {
+  align-items: center;
+}
+.article-6 {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.article-7 {
+  grid-area: g;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
