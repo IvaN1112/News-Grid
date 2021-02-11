@@ -180,6 +180,13 @@ nav {
   grid-template-columns: 6fr 3fr 2fr;
   align-items: center;
 }
+.navigation {
+  box-shadow: var(--dark-shadow);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: var(--clr-white);
+}
 .logo-img {
   width: 180px;
 }
@@ -454,5 +461,79 @@ form .btn {
   .copyright {
     grid-column: 1/2;
     margin: 0;
+  }
+}
+
+/*****************
+***** Article Page*****
+ *****************/
+.article-page-center {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 1.5rem;
+}
+.article-page-center > * {
+  background: var(--clr-white);
+  padding: 1.5rem;
+}
+.article-page {
+  background: var(--clr-grey-10);
+  padding: 3.5rem 0;
+}
+.article-page-article {
+  padding: 1rem;
+}
+.article-page-article h1 {
+  font-size: 2.5rem;
+}
+.article-page-article:first-child {
+  grid-row: 1 / span 3;
+}
+
+/*****************
+***** About Page*****
+ *****************/
+
+.about-page {
+  background: var(--clr-grey-10);
+}
+.about-page h1 {
+  font-size: 3rem;
+}
+.about-page-center > * {
+  background: var(--clr-white);
+  padding: 1rem;
+}
+.about-page-center {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 1rem;
+}
+.about-us {
+  grid-row: 1 / span 3;
+  word-spacing: 5px;
+}
+
+.join-our-club {
+  background-color: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.join-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--dark-color);
+  width: 100%;
+  text-align: center;
+}
+.join-btn:hover {
+  background: var(--dark-color);
+  color: var(--clr-grey-9);
+}
+@media screen and (max-width: 764px) {
+  .about-page-center {
+    grid-template-columns: 1fr;
+  }
+  .join-our-club {
+    text-align: center;
   }
 }
