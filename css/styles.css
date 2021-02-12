@@ -224,6 +224,7 @@ nav ul {
   color: var(--clr-primary-5);
 }
 .about-link {
+  color: var(--dark-color);
   transition: var(--transition);
 }
 .about-link:hover {
