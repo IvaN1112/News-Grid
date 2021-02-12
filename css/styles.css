@@ -467,29 +467,65 @@ form .btn {
 /*****************
 ***** Article Page*****
  *****************/
+.article-page {
+  background: var(--clr-grey-10);
+}
+.article-page h1 {
+  font-size: 2.5rem;
+}
 .article-page-center {
   display: grid;
   grid-template-columns: 5fr 2fr;
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 .article-page-center > * {
-  background: var(--clr-white);
-  padding: 1.5rem;
-}
-.article-page {
-  background: var(--clr-grey-10);
-  padding: 3.5rem 0;
-}
-.article-page-article {
   padding: 1rem;
+  background: var(--clr-white);
 }
-.article-page-article h1 {
-  font-size: 2.5rem;
-}
-.article-page-article:first-child {
+.article-page-info {
   grid-row: 1 / span 3;
 }
-
+.written-by {
+  padding: 1rem 0.5rem;
+  background: var(--clr-grey-10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article-page-info p:first-of-type {
+  margin-top: 1rem;
+}
+.article-page-info p:last-of-type {
+  margin: 1rem 0;
+}
+.article-page .join-our-club {
+  background-color: var(--sports-color);
+}
+.categories ul {
+  list-style-type: none;
+}
+.categories ul li a {
+  color: var(--dark-color);
+  display: inline-block;
+  width: 90%;
+  padding: 0.35rem 0;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--clr-grey-7);
+  transition: var(--transition);
+}
+.categories ul li a:hover {
+  color: var(--clr-primary-5);
+  border-bottom-color: var(--clr-primary-5);
+}
+@media screen and (max-width: 764px) {
+  .article-page-center {
+    grid-template-columns: 1fr;
+  }
+  .categories ul li a {
+    width: 100%;
+    text-align: center;
+  }
+}
 /*****************
 ***** About Page*****
  *****************/
